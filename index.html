@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>rans — Portfolio</title>
   <meta name="description" content="rans — Yearner &amp; Designer specializing in Web Design, UI/UX, and Branding." />
 
- 
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="img/logo.png" />
+
+  <!-- Photo centering for project cards (only addition) -->
+  <style>
+    .project-thumb {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-thumb img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;       /* fills the whole box, centered */
+      object-position: center;
+      display: block;
+    }
+  </style>
 </head>
+
 <body>
 
   <div id="cursor-glow" aria-hidden="true"></div>
 
-  
+
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container-fluid px-4 px-lg-5">
       <a class="navbar-brand nav-logo" href="#hero">rans</a>
@@ -39,7 +64,8 @@
         </ul>
         <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
           <a href="#" class="nav-icon" aria-label="Resume"><i class="bi bi-file-earmark-text"></i></a>
-          <a href="https://linkedin.com" target="_blank" class="nav-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="nav-icon" aria-label="LinkedIn"><i
+              class="bi bi-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -50,7 +76,7 @@
 
     <div class="container-fluid px-4 px-lg-5 hero-inner">
 
-      
+
       <div class="hero-meta d-flex justify-content-between align-items-center">
         <span class="meta-left">
           Based in Philippines → <strong id="localTime">Loading...</strong>
@@ -62,12 +88,12 @@
 
       <hr class="hero-divider" />
 
-      
+
       <div class="hero-heading-wrap">
         <h1 class="hero-heading">Hi, this is rans.</h1>
       </div>
 
-      
+
       <div class="hero-sub mt-5">
         <p class="sub-line">Currently → <strong>Yearner & Designer</strong></p>
         <p class="sub-line">Specializing → <strong>Web Design • UI/UX • Branding</strong></p>
@@ -76,7 +102,7 @@
     </div>
   </section>
 
-  
+
   <section id="projects" class="section-block">
     <div class="container-fluid px-4 px-lg-5">
       <div class="section-label mb-5">
@@ -85,39 +111,51 @@
       </div>
 
       <div class="row g-4">
-        <!-- Card 1 -->
+        <!-- Card 1 (left) -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="project-card">
-            <div class="project-thumb thumb-blue"></div>
+            <div class="project-thumb thumb-blue">
+              <img src="img/iskonek.jpg" alt="Iskonek Campus Platform preview" loading="lazy" />
+            </div>
             <div class="project-info">
               <span class="project-tag">Web Design</span>
               <h3 class="project-title">Iskonek Campus Platform</h3>
-              <p class="project-desc">A full-stack campus management system for students and admins — calendar, deadlines, and role-based dashboards.</p>
+              <p class="project-desc">A full-stack campus management system for students and admins — calendar,
+                deadlines, and role-based dashboards.</p>
               <a href="#" class="project-link">View Case Study →</a>
             </div>
           </div>
         </div>
-        
+
+        <!-- Card 2 (middle) -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="project-card">
-            <div class="project-thumb thumb-navy"></div>
+            <div class="project-thumb thumb-navy">
+              <img src="img/motogplogo.jpg" alt="Moto GP Bento preview" loading="lazy" />
+            </div>
             <div class="project-info">
               <span class="project-tag">UI/UX</span>
               <h3 class="project-title">Moto GP Bento</h3>
-              <p class="project-desc">A sleek MotoGP bento-style website featuring race highlights, team standings, in a modern, organized grid layout.</p>
-              <a href="https://emdee-git.github.io/WebDev/Bento/" target="_blank" class="project-link">View Case Study →</a>
+              <p class="project-desc">A sleek MotoGP bento-style website featuring race highlights, team standings, in a
+                modern, organized grid layout.</p>
+              <a href="https://emdee-git.github.io/WebDev/Bento/" target="_blank" class="project-link">View Case Study
+                →</a>
             </div>
           </div>
         </div>
-        
+
+        <!-- Card 3 (right) -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="project-card">
-            <div class="project-thumb thumb-slate"></div>
+            <div class="project-thumb thumb-slate">
+              <img src="img/akatsuki.jpg" alt="Akatsuki: Outcasts of Peace" loading="lazy" />
+            </div>
             <div class="project-info">
-              <span class="project-tag">Branding</span>
-              <h3 class="project-title">Brand Identity System</h3>
-              <p class="project-desc">Complete visual identity for a local tech startup — logo, color system, typography, and brand guidelines.</p>
-              <a href="#" class="project-link">View Case Study →</a>
+              <span class="project-tag">Project</span>
+              <h3 class="project-title">Akatsuki: Outcasts of Peace</h3>
+              <p class="project-desc">A web-based platform for showcasing the world of Akatsuki — featuring character profiles, storylines, and interactive elements.</p>
+              <a href="https://emdee-git.github.io/WebDev/JSON/" target="_blank" class="project-link">View Case Study
+                →</a>
             </div>
           </div>
         </div>
@@ -125,7 +163,7 @@
     </div>
   </section>
 
-  
+
   <section id="about" class="section-block section-dark">
     <div class="container-fluid px-4 px-lg-5">
       <div class="row align-items-center g-5">
@@ -135,10 +173,13 @@
         </div>
         <div class="col-12 col-lg-6 offset-lg-1">
           <p class="about-body">
-            I'm Rans — a designer, developer, and aspiring cadet ready to serve the community. I bridge the gap between design and code with a universal aesthetic that appeals to everyone and an obsessive focus on the details. From PHP to pixel-perfect layouts, I build interfaces that earn trust through discipline and precision.
+            I'm Rans — a designer, developer, and aspiring cadet ready to serve the community. I bridge the gap between
+            design and code with a universal aesthetic that appeals to everyone and an obsessive focus on the details.
+            From PHP to pixel-perfect layouts, I build interfaces that earn trust through discipline and precision.
           </p>
           <p class="about-body">
-            When I'm not pushing pixels or writing PHP, I'm studying how great interfaces earn trust — and applying those lessons to every project I take on.
+            When I'm not pushing pixels or writing PHP, I'm studying how great interfaces earn trust — and applying
+            those lessons to every project I take on.
           </p>
           <hr class="about-divider" />
           <div class="d-flex gap-5 mt-4">
@@ -160,7 +201,7 @@
     </div>
   </section>
 
-  
+
   <section id="skills" class="section-block">
     <div class="container-fluid px-4 px-lg-5">
       <div class="section-label mb-5">
@@ -216,7 +257,7 @@
     </div>
   </section>
 
-  
+
   <section id="contact" class="section-block section-contact">
     <div class="grain-overlay grain-subtle"></div>
     <div class="container-fluid px-4 px-lg-5 position-relative">
@@ -224,18 +265,19 @@
         <div class="col-12 col-lg-8">
           <span class="eyebrow">Let's Connect</span>
           <h2 class="contact-heading">Have a project in mind?</h2>
-          <p class="contact-sub">Whether it's a new product, a redesign, or just a conversation — I'd love to hear about it.</p>
+          <p class="contact-sub">Whether it's a new product, a redesign, or just a conversation — I'd love to hear about
+            it.</p>
           <a href="mailto:hello@rans.dev" class="btn-primary-custom">Get in Touch →</a>
         </div>
       </div>
     </div>
   </section>
 
-  
+
   <footer class="site-footer">
     <div class="container-fluid px-4 px-lg-5">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-    
+
         <span class="footer-copy">© <span id="footerYear"></span> All rights reserved.</span>
         <div class="d-flex gap-4">
           <a href="#projects" class="footer-link">Work</a>
@@ -247,18 +289,18 @@
     </div>
   </footer>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-   
+
     (function () {
       const glow = document.getElementById('cursor-glow');
       if (!glow) return;
 
       let mouseX = window.innerWidth / 2;
       let mouseY = window.innerHeight / 2;
-      let glowX  = mouseX;
-      let glowY  = mouseY;
+      let glowX = mouseX;
+      let glowY = mouseY;
 
       document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
@@ -270,14 +312,14 @@
         glowY += (mouseY - glowY) * 0.1;
 
         glow.style.left = glowX + 'px';
-        glow.style.top  = glowY + 'px';
+        glow.style.top = glowY + 'px';
 
         requestAnimationFrame(animateGlow);
       }
       animateGlow();
     })();
 
-    
+
     function updateTime() {
       const now = new Date();
       const phTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
@@ -332,4 +374,5 @@
     document.getElementById('footerYear').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
