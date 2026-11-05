@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="img/logo.png" />
 
-  <!-- Photo centering for project cards (only addition) -->
   <style>
     .project-thumb {
       position: relative;
@@ -34,9 +33,20 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;       /* fills the whole box, centered */
+      object-fit: cover;       
       object-position: center;
       display: block;
+    }
+
+    .project-thumb img.img-contain {
+      object-fit: contain;
+      object-position: center;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .project-thumb.thumb-blue {
+      background: #000000;
     }
   </style>
 </head>
@@ -115,14 +125,13 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="project-card">
             <div class="project-thumb thumb-blue">
-              <img src="img/iskonek.jpg" alt="Iskonek Campus Platform preview" loading="lazy" />
+              <img src="img/overwatch.jpg" class="img-contain" alt="Overwatch: Character Profiles preview" loading="lazy" />
             </div>
             <div class="project-info">
-              <span class="project-tag">Web Design</span>
-              <h3 class="project-title">Iskonek Campus Platform</h3>
-              <p class="project-desc">A full-stack campus management system for students and admins — calendar,
-                deadlines, and role-based dashboards.</p>
-              <a href="#" class="project-link">View Case Study →</a>
+              <span class="project-tag">API Development</span>
+              <h3 class="project-title">Overwatch: Character Profiles</h3>
+              <p class="project-desc">Searchable Overwatch hero directory API delivering profiles, roles, and stats in real time.</p>
+              <a href="https://emdee-git.github.io/WebDev/API_DEV" class="project-link">View Case Study →</a>
             </div>
           </div>
         </div>
